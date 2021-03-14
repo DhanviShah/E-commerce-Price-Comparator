@@ -1,0 +1,39 @@
+body{
+	background: url(https://image.shutterstock.com/image-vector/online-shopping-network-ecommerce-sales-260nw-1191312694.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.a{
+	background: rgb(145,246,235);
+	width: 300px;
+	height: 400px;
+	margin: 7% auto;
+	padding: 5px;
+	border-radius: 7%;
+	text-align: center;
+	border: none;
+}
+.b{
+	color: #2c3e50;
+}
+.inp{
+	border-radius: 20px;
+	border: 0.2px solid black;
+	padding: 10px;
+	margin: 10px 0;
+}
+button{
+	width: 100%;
+	padding: 5px;
+	border: 1px solid black;
+	border-radius: 20px;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+button:hover{
+	background: #2c3e50;
+	color: #ecf0f1;
+}
+hr{
+	margin: 30px 0;
+}

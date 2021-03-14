@@ -1,0 +1,29 @@
+body{
+	background: #ecf0f1;
+	margin: 0;
+}
+.abc{
+	background: #2c3e50;
+}
+.navbar-default{
+	margin: 0;
+	border: none;
+}
+.navbar-default .navbar-nav>li>a{
+	color: white;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+.navbar-default .navbar-brand{
+	color: white;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+.navbar-default .navbar-nav>li>a:hover{
+	background: #ecf0f1;
+	color: #2c3e50;
+}
+.navbar-default .navbar-brand:hover{
+	background: #ecf0f1;
+	color: #2c3e50;
+}
