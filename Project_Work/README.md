@@ -1,2 +1,2 @@
-# Project
+# E-commerce Price Comparator
 
