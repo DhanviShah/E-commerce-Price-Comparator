@@ -1,3 +1,5 @@
+from smtplib import SMTP
+
 def send_mail(sender,to):
   server = SMTP('smtp.gmail.com',587)
   server.ehlo()
@@ -11,5 +13,10 @@ def send_mail(sender,to):
   msg = f'subject: {subject} \n\n {body}'
 
   server.sendmail(sender,to,msg)
-  print('mail sent!!! hurray parwwwrriiiii')
+  print('Mail sent successfully!')
   server.quit()
+
+to = ['srishtikalra65@gmail.com','dhanvi2301@gmail.com']
+sender = 'daamjano@gmail.com'
+
+send_mail(sender,to)
