@@ -67,6 +67,8 @@ h4{
 .big .box .bu button{
 	background:#384f66;
 	border: #384f66;
+	text-align: center;
+	width: max-content;
 }
 .deal{
 	max-height: 250px;
