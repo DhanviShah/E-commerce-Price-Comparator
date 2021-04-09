@@ -21,7 +21,7 @@ body{
 }
 
 h4{
-	margin: 20px;
+	margin: 25px;
 	color: white;
 }
 .navbar-default .navbar-nav>li>a:hover{
@@ -35,18 +35,17 @@ h4{
 
 .big{
 	position:relative;
-	width: 1200px;
-	height: 20px;
-	margin: 70px auto;
+	width: 1000px;
+	height: 5px;
+	margin: 120px auto;
 }
 
 .big .box{
 	position: relative;
-	width: calc(230px - 20px);
-	height: calc(70px - 10px);
 	background:#384f66;
 	float: left;
-	margin: 15px;
+	margin: 0px;
+    	width: 200px;
 	box-sizing: border-box;
 	overflow: hidden;
 	border-radius: 10px;
@@ -54,14 +53,17 @@ h4{
 
 .big .box .bu{
 	color: white;
-	padding: 20px;
+	padding: 10px;
 	font-size: 17px;
 	text-align: center;
+        flex:1;
 }
 
 .big .box .bu button{
 	background:#384f66;
 	border: white;
+	width: 15S0px;
+   	 height: 70px;
 	cursor: pointer;
 }
 
@@ -157,7 +159,7 @@ button .fa{
 	float: left;
 	box-sizing: border-box;
 	border-radius: 10px;
-	
+
 }
 
 .column1 .site img{
