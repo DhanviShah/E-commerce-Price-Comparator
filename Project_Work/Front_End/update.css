@@ -1,6 +1,5 @@
 body{
 	background-color: #ffffff;
-	background-color: #ecf0f1;
 	background-size: cover;
 	background-position: center;
 }
@@ -14,15 +13,6 @@ body{
 	text-align: center;
 	border: 1px solid #6C5CE7;
 	border-color: #6C5CE7;
-
-	background: #2c3e50;
-	width: 300px;
-	height: 400px;
-	margin: 10% auto;
-	padding: 5px;
-	border-radius: 7%;
-	text-align: center;
-	border: none;
 }
 
 h1{
@@ -60,28 +50,4 @@ button{
 }
 button:active{
 	background: #6C5CE7;
-
-img{
-    width: 40%;
-    height: 20%;
-}
-.inp{
-	border-radius: 0px;
-	border: 0.2px solid black;
-	padding: 10px;
-	margin: 10px 0;
-}
-button{
-	width: 100%;
-	padding: 7px;
-	font-weight: 700;
-	letter-spacing: 1px;
-	border: 1px solid black;
-	border-radius: 0px;
-	margin: 30px auto;
-}
-button:hover{
-	background: #2c3e50;
-
-	color: #ecf0f1;
 }
