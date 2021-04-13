@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/login.css' %}">
+</head>
+
+<body>
+    <div class="a">
+      <form method="post" novalidate>
+          <h1>Login</h1>
+        {% if form.non_field_errors %}
+        {% for error in form.non_field_errors %}
+        <p> {{error}} </p>
+        {% endfor%}
+        {% endif%}
+        {% csrf_token %}
+        {% for fm in form %}
+        {{ fm.label_tag }} {{fm}} {{ fm.errors|striptags}} <br>
+        {% endfor%}
+        <button type="submit" class='signup'>Login</button>
+    </form>
+    <a href="{% url 'home' %}">back</a>
+    <a href="{% url 'signup' %}">new user?</a>
+    </div>
+</body>
+
+</html>
