@@ -17,8 +17,13 @@ body {
     width: 60%;
 }
 
+.form-control::placeholder {
+    color: white;
+    opacity: 0.65;
+}
+
 .form-group {
-    /*color: white;*/
+    color: white;
     width: 100%;
 }
 
@@ -63,7 +68,7 @@ body {
 .big .box1 {
     position: relative;
     width: calc(270px - 20px);
-    height: calc(220px - 10px);
+    height: calc(240px - 10px);
     background: #00B894;
     float: left;
     margin: 15px;
@@ -75,7 +80,7 @@ body {
 .big .box2 {
     position: relative;
     width: calc(270px - 20px);
-    height: calc(220px - 10px);
+    height: calc(240px - 10px);
     background: #A29BFE;
     float: left;
     margin: 15px;
@@ -87,7 +92,7 @@ body {
 .big .box3 {
     position: relative;
     width: calc(270px - 20px);
-    height: calc(220px - 10px);
+    height: calc(240px - 10px);
     background: #FF7675;
     float: left;
     margin: 15px;
@@ -99,7 +104,7 @@ body {
 .big .box4 {
     position: relative;
     width: calc(270px - 20px);
-    height: calc(220px - 10px);
+    height: calc(240px - 10px);
     background: #6C5CE7;
     float: left;
     margin: 15px;
@@ -111,7 +116,7 @@ body {
 .big .box5 {
     position: relative;
     width: calc(270px - 20px);
-    height: calc(220px - 10px);
+    height: calc(240px - 10px);
     background: #E84393;
     float: left;
     margin: 15px;
@@ -121,11 +126,14 @@ body {
 }
 
 .box1 img {
-    width: 100%;
-    height: 70%;
+    margin-top: 20px;
+    margin-left: 65px;
+    width: 45%;
+    height: 65%;
 }
 
 .big .box1 .bu {
+    margin-top: 5px;
     color: white;
     padding: 20px;
     font-size: 17px;
@@ -138,12 +146,15 @@ body {
 }
 
 .box2 img {
-    width: 100%;
-    height: 70%;
+    margin-top: 30px;
+    margin-left: 38px;
+    width: 70%;
+    height: 60%;
 }
 
 .big .box2 .bu {
     color: white;
+    margin-top: 5px;
     padding: 20px;
     font-size: 17px;
     text-align: center;
@@ -155,11 +166,14 @@ body {
 }
 
 .box3 img {
-    width: 100%;
-    height: 70%;
+    margin-top: 32px;
+    margin-left: 24px;
+    width: 80%;
+    height: 60%;
 }
 
 .big .box3 .bu {
+    margin-top: 2px;
     color: white;
     padding: 20px;
     font-size: 17px;
@@ -172,13 +186,16 @@ body {
 }
 
 .box4 img {
-    width: 100%;
+    margin-top: 14px;
+    margin-left: 28px;
+    width: 79%;
     height: 70%;
 }
 
 .big .box4 .bu {
     color: white;
     padding: 20px;
+    margin-top: -2px;
     font-size: 17px;
     text-align: center;
 }
@@ -189,13 +206,16 @@ body {
 }
 
 .box5 img {
-    width: 100%;
-    height: 70%;
+    margin-top: 26px;
+    margin-left: 76px;
+    width: 40%;
+    height: 60%;
 }
 
 .big .box5 .bu {
     color: white;
     padding: 20px;
+    margin-top: 8px;
     font-size: 17px;
     text-align: center;
 }
@@ -237,11 +257,11 @@ h2 {
 }
 
 .deal .box1 img {
-    margin-left: 25px;
+    margin-left: 15px;
     border: 1px black solid;
     margin-top: 0;
     position: relative;
-    width: 250px;
+    width: 275px;
     height: 200px;
 }
 
@@ -251,7 +271,7 @@ h2 {
     border-color: #2C14E5;
     border-radius: 20px;
     height: 35px;
-    width: 250px;
+    width: 282px;
     outline: none;
 }
 
