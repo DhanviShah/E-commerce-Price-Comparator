@@ -29,6 +29,7 @@ def amazon(search):
             amazon_price = price_parent_class.find('span','a-offscreen').text
             price = int(''.join(filter(lambda i: i.isdigit(), amazon_price)))
             price_list.append(price)
+            break
         except:
             continue
     min_price = min(price_list)
@@ -65,6 +66,7 @@ def croma(search):
             croma_price = item.find('span',{'data-testid':'price'}).text
             price = (int(''.join(filter(lambda i: i.isdigit(), croma_price))))/100
             price_list.append(price)
+            break
         except:
             continue
     min_price = min(price_list)
@@ -96,6 +98,7 @@ def flipkart(search):
             flipkart_price = atag.find('div',{'class':'_30jeq3 _1_WHN1'}).text
             price = int(''.join(filter(lambda i: i.isdigit(), flipkart_price)))
             price_list.append(price)
+            break
         except:
             continue
     min_price = min(price_list)
