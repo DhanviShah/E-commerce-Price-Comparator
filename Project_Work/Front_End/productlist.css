@@ -3,7 +3,7 @@ body{
 	margin: 0;
 }
 .abc{
-	background: #2c3e50;
+	background: white;
 }
 .navbar-default{
 	margin: 0;
@@ -12,19 +12,27 @@ body{
 .navbar-default .navbar-form{
 	width: 50%;
 }
+.navbar-form .form-control{
+	width: 100%;
+	color: white ;
+	background: #6C5CE7;
+}
+
+.navbar-form .form-group .form-control::placeholder{
+	color: white;
+	opacity: 1;
+}
+
 .form-group{
 	width: 100%;
 }
-.navbar-form .form-control{
-	width: 100%;
-}
 .navbar-default .navbar-nav>li>a{
-	color: white;
+	color: black !important;
 	font-weight: 700;
 	letter-spacing: 1px;
 }
 .navbar-default .navbar-brand{
-	color: white;
+	color: black !important;
 	font-weight: 700;
 	letter-spacing: 1px;
 }
@@ -38,9 +46,35 @@ body{
 	color: #ecf0f1;
 }
 .navbar-default .navbar-nav>li>a:hover{
-	background: blue;
-	color: #ecf0f1;
+	background: #ecf0f1;
+	color: #2c3e50;
 }
+
+.footer {
+    background-color: black;
+    width: 100%;
+    display: -webkit-flex;
+    display: inline-flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.container1 {
+    width: 33%;
+    float: left;
+    color: white;
+    text-align: center;
+    height: 50px;
+    padding-top: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: black;
+}
+
 .navi{
 	padding-top: 50px;
 }
@@ -55,20 +89,29 @@ body{
 	letter-spacing: 1px;
 }
 .mobile{
-	background: #5D5C61;
+	background: #00B894;
 }
+
 .laptop{
-	background: #379683;
+	background: #A29BFE;
 }
+
 .ac{
-	background: #7395AE;
+	background:#FF7675;
 }
 .tv{
-	background: #557A95;
+	background: #6C5CE7;
 }
 .fridge{
-	background: #B1A296;
+	background: #E84393;
 }
+
+.navi a:hover{
+	color: white;
+	text-decoration: none;
+	font-weight: 1000;
+}
+
 a:hover{
 	color: white;
 	text-decoration: none;
@@ -87,7 +130,7 @@ a:active{
 }
 
 .pi{
-	background:  #2c3e50;
+	background:  white;
 	width: 40px;
 	margin-top: 5px;
 	cursor: pointer;
@@ -95,23 +138,6 @@ a:active{
 .dd{
 	font-weight: 800;
 	letter-spacing: 1px;
-}
-.navii{
-	overflow: hidden;
-    position: fixed;
-	bottom: 0;
-	width: 100%;
-}
-.bb{
-	width: 12.5%;
-	float: left;
-	color: white;
-	text-align: center;
-	height: 50px;
-	padding-top: 14px; 
-	font-weight: 700;
-	letter-spacing: 1px;
-	background: #2c3e50;
 }
 .ll{
 	height: 50px;
@@ -219,7 +245,8 @@ a:active{
 	align-self: flex-end;
 }
 .cardbutton:hover{
-	background: pink;
+	color: white;
+	background: #2c3e50;
 	transition: all .4s ease-in-out;
   }
 

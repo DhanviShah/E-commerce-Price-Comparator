@@ -10,9 +10,11 @@ const frameworks = [
     },
     {
       name: "vue"
+    },
+    {
+      name: "abc"
     }
   ];
-  
   frameworks.forEach( framework => {
     const card = `<div class="cardcontainer">
     <div class="images">
