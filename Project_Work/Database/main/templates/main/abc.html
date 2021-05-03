@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Price Comparision</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'main/css/product.css' %}">
+	<script src="https://use.fontawesome.com/02cfcb3bc4.js"></script>
+
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top abc">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+			<a href="#" class="navbar-brand">Daamjaano</a>
+		</div>
+
+		<div class="collapse navbar-collapse" id="bs-nav-demo">
+			<form class="navbar-form navbar-left" method="POST" action="">
+        		<div class="form-group">
+                    {% csrf_token %}
+                    {% for fm in form %}
+                    {{ fm }}
+                    {% endfor %}
+                    <button type="submit">search</button>
+        		</div>
+        		<!-- <button type="submit" class="btn btn-default">Submit</button> -->
+      		</form>
+			
+			<ul class="nav navbar-nav navbar-right">
+				<li><a class="d" href="login.html">Login  <i class="fa fa-user" aria-hidden="true"></i>
+				</a></li>
+				<li><a class="d" href="signup.html">Signup  <i class="fa fa-user-plus" aria-hidden="true"></i>
+				</a></li>
+				<li><a class="d" href="update.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>
+			</ul>	
+		</div>
+	</div>
+	</nav>
+	<div class="navi">
+		<a href="mobile.html" class="b mobile">Mobile Phones  <span class="glyphicon glyphicon-phone" aria-hidden="true"></span></a>
+		<a href="laptop.html" class="b laptop">Laptops  <i class="fa fa-laptop" aria-hidden="true"></i></a>
+		<a href="ac.html" class="b ac">Air Conditioner</a>
+		<a href="tv.html" class="b tv">Televisions  <i class="fa fa-television" aria-hidden="true"></i></a>
+		<a href="fridge.html" class="b fridge">Refrigerator</a>	
+	</div>
+
+	<div>
+		<div><img class="jkl thumbnail" src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-family-select-2020?wid=940&amp;hei=1112&amp;fmt=jpeg&amp;qlt=80&amp;.v=1604343709000" class="desc"></div>
+		
+		
+			<div><h2>Apple Iphone 11</h2></div>
+
+			<div class="container pppp thumbnail">
+		    <p class="desc">The iPhone 11 features dual 12 MP Ultra Wide (13mm) and Wide (26mm) cameras with 4K video recording up to 60 fps. The Ultra Wide camera provides 120Â° field of view, letting you capture four times more scene, and the Wide camera provides 100% Focus Pixels for up to three times.The iPhone 11 features dual 12 MP Ultra Wide (13mm) and Wide (26mm) cameras with 4K video recording up to 60 fps.  
+		    </p>
+		    <div class="marginn"><a href="#" class="margin">set price alert<span class="glyphicon glyphicon-bell" aria-hidden="true"></span></a>
+            </a></div></div>
+		
+	</div>
+	
+	<div class="grp">
+		<h3 class="clr">Price List </h3>
+		<hr>
+		<div class="p"></div>
+		<div class="p"></div>
+		<div class="ll p bord">amazon</div>
+		<div class="p"></div>
+		<div class="p">Rs. XXXX</div>
+		<div class="p"></div>
+		<div class="p"><button>view details</button></div>
+		<div class="p bord"></div>
+		<div class="p"></div>
+
+		<hr>
+		<div class="p"></div>
+		<div class="p"></div>
+		<div class="ll p bord">amazon</div>
+		<div class="p"></div>
+		<div class="p">Rs. XXXX</div>
+		<div class="p"></div>
+		<div class="p"><button>view details</button></div>
+		<div class="p bord"></div>
+		<div class="p"></div>
+		<hr>
+		<div class="p"></div>
+		<div class="p"></div>
+		<div class="ll p bord">amazon</div>
+		<div class="p"></div>
+		<div class="p">Rs. XXXX</div>
+		<div class="p"></div>
+		<div class="p"><button>view details</button></div>
+		<div class="p bord"></div>
+		<div class="p"></div>
+		<hr>	
+	</div>
+	
+	
+	<div class="navii">
+		<a class="bb blck"></a>
+		<a class="bb blck"></a>
+
+		<a href="#" class="bb">Contact us</a>
+		<a href="#" class="bb">Help</a>
+		<a href="#" class="bb">About us</a>
+		<a href="#" class="bb">FAQs</a>
+		
+		<a class="bb blck"></a>
+		<a class="bb blck"></a>
+	</div>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="productpage.js"></script>
+</body>
+
+</html>
