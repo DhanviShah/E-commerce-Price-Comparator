@@ -21,7 +21,9 @@ def croma_product_list(search):
             image_url.append(image)
             atag = item.h3.a
             description = atag.text.strip()
-            description_list.append(description)
+            s = description.split("(",1)
+            s = s[0]
+            description_list.append(s)
             redirection_URL = 'https://www.croma.com' + atag.get('href')
             url.append(redirection_URL)
             croma_price = item.find('span',{'data-testid':'price'}).text
@@ -58,7 +60,9 @@ def amazon_product_list(search):
             image_url.append(image)
             atag = item.h2.a
             description = atag.text.strip()
-            description_list.append(description)
+            s = description.split("(",1)
+            s = s[0]
+            description_list.append(s)
             redirection_URL = 'https://www.amazon.in' + atag.get('href')
             url.append(redirection_URL)
             price_parent_class = item.find('span','a-price')
@@ -81,6 +85,6 @@ def amazon_product_list(search):
     
 search = input('Enter the product for which you want a list: ')
 driver = wb.Chrome('C:/Users/srishti kalra/Downloads/chromedriver.exe')
-croma_product_list(search)
+#croma_product_list(search)
 amazon_product_list(search)
 driver.quit()
