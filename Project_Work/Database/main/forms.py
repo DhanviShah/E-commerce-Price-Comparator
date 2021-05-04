@@ -8,4 +8,4 @@ class UserSignUpForm(UserCreationForm):
         fields=('username','email','password1','password2')
 
 class Search(forms.Form):
-    name=forms.CharField(max_length=70)
+    name=forms.CharField(widget =forms.TextInput(attrs={'placeholder': 'Search', 'class': 'form-control'}))
