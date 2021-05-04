@@ -24,11 +24,11 @@
 		</div>
 
 		<div class="collapse navbar-collapse" id="bs-nav-demo">
-			<form class="navbar-form navbar-left" method="POST">
+			<form class="navbar-form navbar-left" method="POST" action="/">
         		<div class="form-group">
 					<!-- <input type="text" class="form-control" placeholder="Search"> -->
 					{% csrf_token %}
-					{% for fm in form %}
+					{% for fm in fm2 %}
 					{{ fm }}
 					{% endfor %}
 					<button type="submit" style="display: none;">search</button>
@@ -46,11 +46,13 @@
 	</div>
 	</nav>
 	<div class="navi">
-		<a href="mobile.html" class="b mobile">Mobile Phones  <!-- <span class="glyphicon glyphicon-phone" aria-hidden="true"></span> --></a>
-		<a href="laptop.html" class="b laptop">Laptops  <!-- <i class="fa fa-laptop" aria-hidden="true"></i> --></a>
-		<a href="ac.html" class="b ac">Air Conditioner</a>
-		<a href="tv.html" class="b tv">Televisions  <!-- <i class="fa fa-television" aria-hidden="true"></i> --></a>
-		<a href="fridge.html" class="b fridge">Refrigerator</a>	
+		<div class="navi">
+			<a href="{% url 'list' 'mobiles' %}" class="b mobile">Mobile Phones</a>
+			<a href="{% url 'list' 'laptops' %}" class="b laptop">Laptops</a>
+			<a href="{% url 'list' 'ac' %}" class="b ac">Air Conditioner</a>
+			<a href="{% url 'list' 'tv' %}" class="b tv">Televisions</a>
+			<a href="{% url 'list' 'refrigerators' %}" class="b fridge">Refrigerator</a>
+		</div>
 	</div>
 
 	<div>
