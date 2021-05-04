@@ -20,6 +20,10 @@ def home(request):
     fm=Search()
   return render(request,'main/home.html', {'form':fm})
 
+def update(request):
+  fm={}
+  return render(request,'main/update.html', { 'form': fm })
+
 def login(request):
   if request.user.is_authenticated:
     return redirect('home')
@@ -211,6 +215,94 @@ def product(request,product):
       }
       messages.info(request,'success')
       return render(request,'main/product.html',fm)
+
+
+def p_list(request,search):
+  List=[]
+  driver = wb.Chrome('F:/chromedriver/chromedriver.exe')
+  # product_name = search.replace(" ","+")
+  # croma_string = f'https://croma.com/search/?text={product_name}'
+  # driver.get(croma_string)
+  # #time.sleep(10)
+  # soup = BeautifulSoup(driver.page_source,'html.parser')
+  # results = soup.find_all('li',{'class':'product-item'})
+  # #time.sleep(20)
+  # print('total results: ', len(results))
+  # price_list = []
+  # url = []
+  # description_list = []
+  # image_url = []
+  # for item in results:
+  #   try:
+  #     image_object = item.find('img')
+  #     image = image_object.get('src')
+  #     image_url.append(image)
+  #     atag = item.h3.a
+  #     description = atag.text.strip()
+  #     description_list.append(description)
+  #     redirection_URL = 'https://www.croma.com' + atag.get('href')
+  #     url.append(redirection_URL)
+  #     croma_price = item.find('span',{'data-testid':'price'}).text
+  #     price = (int(''.join(filter(lambda i: i.isdigit(), croma_price))))/100
+  #     price_list.append(price)
+  #   except:
+  #     continue
+
+  # for iterator in range(len(description_list)):
+  #   try:
+  #     List.append({
+  #       'number':number+1,
+  #       'des_list': description_list[iterator],
+  #       'price':price_list[iterator],
+  #       'imag_url':image_url[iterator],
+  #       'link':url[iterator],
+  #     })
+  #     print(iterator)
+  #   except:
+  #     continue
+    
+  ## for amazon
+  product_name = search
+  amazon_string = f'https://www.amazon.in/s?k={product_name}'
+  driver.get(amazon_string)
+  soup = BeautifulSoup(driver.page_source,'html.parser')
+  results = soup.find_all('div',{'data-component-type':'s-search-result'})
+  print('total results: ',len(results))
+  price_list = []
+  url = []
+  description_list = []
+  image_url = []
+  for item in results:
+    try:
+      image_object = item.find('img')
+      image = image_object.get('src')
+      image_url.append(image)
+      atag = item.h2.a
+      description = atag.text.strip()
+      s=description.split("(",1)
+      s=s[0]
+      description_list.append(s)
+      redirection_URL = 'https://www.amazon.in' + atag.get('href')
+      url.append(redirection_URL)
+      price_parent_class = item.find('span','a-price')
+      amazon_price = price_parent_class.find('span','a-offscreen').text
+      price = int(''.join(filter(lambda i: i.isdigit(), amazon_price)))
+      price_list.append(price)
+    except:
+      continue
+
+  for iterator in range(len(description_list)):
+    try:
+      List.append({
+        'des_list': description_list[iterator],
+        'price':price_list[iterator],
+        'imag_url':image_url[iterator],
+        'link':url[iterator],
+      })
+    except:
+      continue
+  driver.quit()  
+  return render(request, 'main/productlist.html',{'data':List})
 
 
 

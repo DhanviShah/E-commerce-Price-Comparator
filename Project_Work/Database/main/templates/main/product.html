@@ -26,16 +26,13 @@
 		<div class="collapse navbar-collapse" id="bs-nav-demo">
 			<form class="navbar-form navbar-left" method="POST">
         		<div class="form-group">
-          			<input type="text" class="form-control" placeholder="Search">
-        		</div>
-				<!-- <div class="form-group">
+					<!-- <input type="text" class="form-control" placeholder="Search"> -->
 					{% csrf_token %}
 					{% for fm in form %}
 					{{ fm }}
 					{% endfor %}
-					<button type="submit">search</button>
-				</div> -->
-        		<!-- <button type="submit" class="btn btn-default">Submit</button> -->
+					<button type="submit" style="display: none;">search</button>
+				</div>
       		</form>
 			
 			<ul class="nav navbar-nav navbar-right">
@@ -43,7 +40,7 @@
 				</a></li>
 				<li><a class="d" href="{% url 'signup' %}">Signup  <i class="fa fa-user-plus" aria-hidden="true"></i>
 				</a></li>
-				<li><a class="d" href="update.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>
+				<li><a class="d" href="{% url 'update'%}"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>
 			</ul>	
 		</div>
 	</div>
@@ -131,7 +128,7 @@
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<!-- <script type="text/javascript" src="productpage.js"></script> -->
+	<!-- <script type="text/javascript" src="{% static 'main/js/productpage.js'%}"></script> -->
 </body>
 
 </html>
