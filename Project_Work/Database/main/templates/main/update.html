@@ -15,8 +15,13 @@
     <div class="bottom"></div>
     <div class="center">
 	    <img src="{% static 'main/images/person.png'%}" alt="Profile Picture" class="profile_img">
-        <input type="email" placeholder="email"/>
-	    <input type="password" placeholder="password"/>
+        <form action="" method="post">
+            {% csrf_token%}
+            {% for f in fm %}
+            {{f}}
+            {% endfor %}
+            <button type="submit">submit</button>
+        </form>  
 	    <div class="end"><a href="{% url 'home'%}"><button class="buttons">Back</button></a><button class="buttons">Update</button>
 	    </div>
     <h2>&nbsp;</h2>

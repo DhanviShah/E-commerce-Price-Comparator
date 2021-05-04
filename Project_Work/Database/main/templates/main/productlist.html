@@ -28,11 +28,11 @@
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-nav-demo">
-				<form class="navbar-form navbar-left" method="POST">
+				<form class="navbar-form navbar-left" method="POST" action="./">
 					<div class="form-group">
 						<!-- <input type="text" class="form-control" placeholder="Search"> -->
 						{% csrf_token %}
-                        {% for fm in form %}
+                        {% for fm in fm2 %}
                         {{ fm }}
                         {% endfor %}
                         <button type="submit" style="display: none;">Search</button>
@@ -69,7 +69,7 @@
 			</div>
             
 			<div class="buttons">
-				<a href={{x.link}}><button class="add cardbutton">Details</button></a>
+				<a href="../product/{{x.des_list}}"><button class="add cardbutton">Details</button></a>
 			</div>
 		</div>
 		{% endfor%}

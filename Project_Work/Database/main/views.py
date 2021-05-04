@@ -1,9 +1,9 @@
 from django.shortcuts import render,redirect
 from .models import Product_Database, dummy
 import requests
-from .forms import UserSignUpForm,Search
-from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth import authenticate,login as l,logout as g
+from .forms import UserSignUpForm,Search,UserUpdateForm
+from django.contrib.auth.forms import AuthenticationForm,PasswordChangeForm
+from django.contrib.auth import authenticate,login as l,logout as g,update_session_auth_hash
 from django.contrib import messages
 from django.http import HttpResponse
 from selenium import webdriver as wb
@@ -21,8 +21,15 @@ def home(request):
   return render(request,'main/home.html', {'form':fm})
 
 def update(request):
-  fm={}
-  return render(request,'main/update.html', { 'form': fm })
+  if request.method=='POST':
+    fm=PasswordChangeForm(user=request.user, data=request.POST)
+    if fm.is_valid():
+      fm.save()
+      update_session_auth_hash(request,fm.user)
+      return redirect('login')
+  else:
+    fm=PasswordChangeForm(user=request.user)
+  return render(request,'main/update.html', { 'fm': fm })
 
 def login(request):
   if request.user.is_authenticated:
@@ -182,9 +189,11 @@ def product(request,product):
       'priceA':amazonP,
       'priceF':flipkartP,
       'priceC':cromaP,
+      'fm2':Search(),
     }
     obj=dummy(id=1,des=des,imag_url=imag_url,linkA=linkA,linkC=linkC,linkF=linkF,amazonP=amazonP,flipkartP=flipkartP,cromaP=cromaP)
     obj.save()
+    
     return render(request,'main/product.html',fm)
   else:
     if request.user.is_authenticated==False:
@@ -212,6 +221,7 @@ def product(request,product):
         'priceA':obj.amazonP,
         'priceF': obj.flipkartP,
         'priceC': obj.cromaP,
+        'fm2':Search(),
       }
       messages.info(request,'success')
       return render(request,'main/product.html',fm)
@@ -262,7 +272,7 @@ def p_list(request,search):
   #     continue
     
   ## for amazon
-  product_name = search
+  product_name = search.replace(" ","+")
   amazon_string = f'https://www.amazon.in/s?k={product_name}'
   driver.get(amazon_string)
   soup = BeautifulSoup(driver.page_source,'html.parser')
@@ -302,7 +312,7 @@ def p_list(request,search):
     except:
       continue
   driver.quit()  
-  return render(request, 'main/productlist.html',{'data':List})
+  return render(request, 'main/productlist.html',{'data':List, 'fm2': Search()})
 
 
 
