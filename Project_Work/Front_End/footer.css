@@ -1,0 +1,25 @@
+.footer {
+    background-color: black;
+    width: 100%;
+    display: -webkit-flex;
+    padding: 1.2em 1em 0;
+    display: inline-flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.container {
+    width: 33%;
+    float: left;
+    color: white;
+    text-align: center;
+    height: 50px;
+    padding-top: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: black;
+}
