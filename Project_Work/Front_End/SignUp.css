@@ -106,3 +106,32 @@ font-family: inherit;
 	font-size: medium;
 	padding-top: 10%;
 }
+
+.LOG{
+	font-size: medium;
+	padding-top: 10%;
+	color: blue;
+}
+
+.title{
+	width: 300px;
+	text-align: center;
+		font-family: cursive;
+		font-size: 35px;
+		margin-bottom: 30px;
+}
+
+input[type=text].box{
+	width: 300px;
+	height: 40px;
+
+}
+
+input[type=email].box{
+	width: 300px;
+	height: 40px;
+}
+input[type=password].box{
+	width: 300px;
+	height: 40px;
+}
