@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Us</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/contactUs.css' %}">
+    <script src="https://use.fontawesome.com/02cfcb3bc4.js"></script>
+    <!-- <script type="text/javascript" src="project.js"></script> -->
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top abc">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed togglebutton" data-toggle="collapse"
+                    data-target="#bs-nav-demo" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">DaamJaano</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-nav-demo">
+                <form class="navbar-form navbar-left" method="POST" action="./">
+					<div class="form-group">
+						<!-- <input type="text" class="form-control" placeholder="Search"> -->
+						{% csrf_token %}
+                        {% for fm in form %}
+                        {{ fm }}
+                        {% endfor %}
+                        <button type="submit" style="display: none;">Search</button>
+					</div>
+					<!-- <button type="submit" class="btn btn-default">Submit</button> -->
+				</form>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="d"><a href="{% url 'login' %}">Login <i class="fa fa-user" aria-hidden="true"></i> </a></li>
+                    <li class="d"><a href="{% url 'signup' %}">Signup <i class="fa fa-user-plus" aria-hidden="true"></i> </a>
+                    </li>
+                    <li><a class="d" href="{% url 'update' %}"><span class="glyphicon glyphicon-user"
+                                aria-hidden="true"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="navi">
+		<a href="{% url 'list' 'mobiles' %}" class="b mobile">Mobile Phones</a>
+		<a href="{% url 'list' 'laptops' %}" class="b laptop">Laptops</a>
+		<a href="{% url 'list' 'ac' %}" class="b ac">Air Conditioner</a>
+		<a href="{% url 'list' 'tv' %}" class="b tv">Televisions</a>
+		<a href="{% url 'list' 'refrigerators' %}" class="b fridge">Refrigerator</a>
+	</div>
+    <div class="box">
+		<h1 class="Header">Contact Us</h1>
+        <p class="content">Email : daamjano@gmail.com</p>
+        <p class="content">Instagram : daam_jaano</p>
+        <p class="content">Facebook : Daam_Jaano</p>
+        <p class="content">Mobile No. : 8980154782</p>
+        <p class="content">Address : B-2, Azad Society, Near Prahladnagar, Ahmedabad - 380069, Gujarat, India</p>
+	</div>
+
+    <div class="footer">
+        <a href="{% url 'contactUs' %}" class="container1">Contact us</a>
+        <a href="{% url 'about' %}" class="container1">About us</a>
+        <a href="{% url 'faq' %}" class="container1">FAQs</a>
+    </div>
+</body>
+
+</html>

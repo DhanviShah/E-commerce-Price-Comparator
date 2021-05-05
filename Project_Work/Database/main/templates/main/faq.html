@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>FAQs</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/faq.css' %}">
+    <script src="https://use.fontawesome.com/02cfcb3bc4.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top abc">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">DaamJaano</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-nav-demo">
+                <form class="navbar-form navbar-left" method="POST" action="./">
+					<div class="form-group">
+						<!-- <input type="text" class="form-control" placeholder="Search"> -->
+						{% csrf_token %}
+                        {% for fm in form %}
+                        {{ fm }}
+                        {% endfor %}
+                        <button type="submit" style="display: none;">Search</button>
+					</div>
+					<!-- <button type="submit" class="btn btn-default">Submit</button> -->
+				</form>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="d"><a href="{% url 'login' %}">Login <i class="fa fa-user" aria-hidden="true"></i> </a></li>
+                    <li class="d"><a href="{% url 'signup' %}">Signup <i class="fa fa-user-plus" aria-hidden="true"></i> </a>
+                    </li>
+                    <li><a class="d" href="{% url 'update' %}"><span class="glyphicon glyphicon-user"
+                                aria-hidden="true"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="navi">
+		<a href="{% url 'list' 'mobiles' %}" class="b mobile">Mobile Phones</a>
+		<a href="{% url 'list' 'laptops' %}" class="b laptop">Laptops</a>
+		<a href="{% url 'list' 'ac' %}" class="b ac">Air Conditioner</a>
+		<a href="{% url 'list' 'tv' %}" class="b tv">Televisions</a>
+		<a href="{% url 'list' 'refrigerators' %}" class="b fridge">Refrigerator</a>
+	</div>
+    <div class="box">
+        <h1 class="Header">FAQs</h1>
+        <div class="Question1">
+            <h3 class="Que">Q1. What is DaamJaano ?</h3>
+            <p class="content">A1. DaamJaano is an online service community that offers price enthusiasts a friendly
+                home from where they can buy products across 5 different electronic categories including mobiles,
+                laptops, air-conditioners, televisions and refrigerators.</p>
+        </div>
+        <div class="Question2">
+            <h3 class="Que">Q2. How do I access DaamJaano ?</h3>
+            <p class="content">A2. Searching for products on our website is easier and faster. To begin, just go to our
+                home page and decide how you would like to search. You can use the search box or click on the category.
+                According to your search request, you will be navigated to your respective page.</p>
+        </div>
+        <div class="Question3">
+            <h3 class="Que">Q3. What kind of topics can be found on DaamJaano ?</h3>
+            <p class="content">A3. DaamJaano features latest launches, all listed products with detailed specification,
+                their images and price.</p>
+        </div>
+        <div class="Question4">
+            <h3 class="Que">Q4. How frequently is DaamJaano updated?</h3>
+            <p class="content">A4. DaamJaano is updated real time with the best offers from the top brands and latest
+                products.</p>
+        </div>
+        <div class="Question5">
+            <h3 class="Que">Q5. What you do....Why do you do ?</h3>
+            <p class="content">A5. Because we are crazy passionate about getting our customers the best value for their
+                money and want to share that love with as many people as possible.</p>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="{% url 'contactUs' %}" class="container1">Contact us</a>
+        <a href="{% url 'about' %}" class="container1">About us</a>
+        <a href="{% url 'faq' %}" class="container1">FAQs</a>
+    </div>
+</body>
+
+</html>

@@ -1,40 +1,41 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <title>SignUp</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'main/css/signup.css' %}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
 </head>
 
 <body>
+    <!-- partial:index.partial.html -->
     <div class="container" onclick="onclick">
-    <div class="top"></div>
-    <div class="bottom"></div>
-    <div class="center">
-        <h2>DaamJaano</h2>
-        <h3>SignUp</h3>
-        <form method="post" novalidate>    
-            {% if form.non_field_errors %}
-            {% for error in form.non_field_errors %}
-            <p> {{error}} </p>
-            {% endfor%}
-            {% endif%}
-            {% csrf_token %}
-            {% for fm in form %}
-            {{ fm.label_tag }} {{fm}} {{ fm.errors|striptags}} <br>
-            {% endfor%}
-            <button type="submit" class='reg'>Signup</button>
-        </form>
-        <h2>&nbsp;</h2>
-    <a href="{% url 'home' %}">Back</a>
-    <a href="{% url 'login' %}">Already have an account?</a>
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="center">
+            <h2 class="title">DaamJaano</h2>
+            <form method="post" novalidate>    
+                {% if form.non_field_errors %}
+                {% for error in form.non_field_errors %}
+                <p> {{error}} </p>
+                {% endfor%}
+                {% endif%}
+                {% csrf_token %}
+                {% for fm in form %}
+                {{fm}} {{ fm.errors|striptags}} <br>
+                {% endfor%}
+                <button type="submit" class='reg'>Signup</button>
+            </form>
+            <p class="end">Already have an account? <a class="LOG" href="{% url 'login' %}">LOG IN</a></p>
+            <h2>&nbsp;</h2>
+        </div>
     </div>
-    </div>
+    <!-- partial -->
     <script src='https://codepen.io/banik/pen/3f837b2f0085b5125112fc455941ea94.js'></script>
 </body>
 
