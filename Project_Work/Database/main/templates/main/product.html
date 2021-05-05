@@ -20,7 +20,7 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 			</button>
-			<a href="#" class="navbar-brand">DaamJaano</a>
+			<a href="{% url 'home' %}" class="navbar-brand">DaamJaano</a>
 		</div>
 
 		<div class="collapse navbar-collapse" id="bs-nav-demo">
@@ -56,14 +56,14 @@
 	</div>
 
 	<div>
-		<div><img class="jkl thumbnail" src={{imagurl}} class="desc"></div>
+		<div class="divv"><img class="jkl thumbnail" src={{imagurl}} class="desc"></div>
 		
 		
 			<div><h2>{{pname|capfirst}}</h2></div>
 
 			<div class="container pppp thumbnail">
 		    <p class="desc">{{des}}</p>
-		    <div class="marginn">
+		    <div class="q">
 				<!-- <a href="#" class="margin">set price alert<span class="glyphicon glyphicon-bell" aria-hidden="true"></span></a> -->
 				<form method="POST" > 
 					{% csrf_token %}
@@ -81,8 +81,7 @@
 		<hr>
 		<div class="p"></div>
 		<div class="p"></div>
-		<div class="ll p bord">Amazon</div>
-		<!-- <div class="lpq pq bord"><img class="sizechange"src="https://bsmedia.business-standard.com/media-handler.php?mediaPath=http://bsmedia.business-standard.com/_media/bs/img/article/2014-09/17/full/1410955312-0696.jpg&width=1200"></div> -->
+		<div class="lpq pq bord"><img class="sizechange"src="https://bsmedia.business-standard.com/media-handler.php?mediaPath=http://bsmedia.business-standard.com/_media/bs/img/article/2014-09/17/full/1410955312-0696.jpg&width=1200"></div>
 		<div class="p"></div>
 		<div class="p">Rs. {{ priceA}}</div>
 		<div class="p"></div>
@@ -93,8 +92,7 @@
 		<hr>
 		<div class="p"></div>
 		<div class="p"></div>
-		<div class="ll p bord">Flipkart</div>
-		<!-- <div class="lpq pq bord"><img class="sizechange"src="https://thecarenumbers.in/wp-content/uploads/2021/01/Flipkart-Logo-1.png"></div> -->
+		<div class="lpq pq bord"><img class="sizechange" src="https://thecarenumbers.in/wp-content/uploads/2021/01/Flipkart-Logo-1.png"></div>
 		<div class="p"></div>
 		<div class="p">Rs. {{priceF}}</div>
 		<div class="p"></div>
@@ -104,8 +102,8 @@
 		<hr>
 		<div class="p"></div>
 		<div class="p"></div>
-		<div class="ll p bord">Croma</div>
-		<!-- <div class="lpq pq bord"><img class="sizechange"src="https://ambiencemalls.com/logos/08-28-18am_30-11-2018-1531798943_rUbCPT_Croma_Logo.jpg"></div> -->
+		<!-- <div class="lpq pq bord">Croma</div> -->
+		<div class="lpq pq bord"><img class="sizechange"src="https://ambiencemalls.com/logos/08-28-18am_30-11-2018-1531798943_rUbCPT_Croma_Logo.jpg"></div>
 		<div class="p"></div>
 		<div class="p">Rs. {{priceC}}</div>
 		<div class="p"></div>

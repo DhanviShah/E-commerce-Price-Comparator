@@ -175,7 +175,7 @@ a:active{
 	position: relative;
 	margin: 30px;
 	overflow: hidden;
-	width: auto;
+	width: 97%;
 	height: 350px;
 	background: white;
 	box-shadow: 5px 5px 15px rgba(#BA7E7E, .5);
@@ -204,7 +204,8 @@ a:active{
   }
 
   img {
-	width: 290px;
+	width: 200px;
+	height: 270px;
 	margin-top: 47px;
   }
 
@@ -214,7 +215,7 @@ a:active{
 	letter-spacing: 0;
 	margin-bottom: 17px;
 	color: #4E4E4E;
-	font-size: .7em;
+	font-size: 25px;
 	line-height: 1.6em;
 	margin-right: 25px;
 	text-align: justify;

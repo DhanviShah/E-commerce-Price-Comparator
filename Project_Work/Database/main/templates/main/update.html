@@ -21,7 +21,7 @@
             <form action="" method="post">
                 {% csrf_token%}
                 {% for f in fm %}
-                {{f}}
+                {{f.label_tag}} {{f}}
                 {% endfor %}
                 <button class="log" type="submit">Update</button>
             </form>
