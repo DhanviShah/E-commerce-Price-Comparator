@@ -134,12 +134,13 @@ a:active{
 	margin-right: auto;
 	margin-top: 8%;
 	margin-bottom: 8%;
-	text-align: center;
+	text-align: left;
 	border-radius: 10px;
 	border-color: #6C5CE7;
 	box-shadow: 4px 8px 16px 8px rgba(0, 0, 0, 0.2);
 	overflow: hidden;
 	padding-bottom: 4%;
+	padding-left: 2%;
 	color: black;
 }
 .box:after {
@@ -149,11 +150,15 @@ a:active{
 .content{
 	font-size: 20px;
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-	text-align: center;
-	padding-left: 2%;
+	text-align: left;
 	padding-right: 2%;
 }
+.Que{
+	font-weight: bold;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 .Header{
+	text-align: center;
 	padding-bottom: 2%;
 	padding-top: 2%;
 	font-weight: bold;

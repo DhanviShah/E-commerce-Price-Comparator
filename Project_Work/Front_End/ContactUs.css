@@ -139,7 +139,7 @@ a:active{
 	border-color: #6C5CE7;
 	box-shadow: 4px 8px 16px 8px rgba(0, 0, 0, 0.2);
 	overflow: hidden;
-	padding-bottom: 4%;
+    padding-bottom: 4%;
 	color: black;
 }
 .box:after {
