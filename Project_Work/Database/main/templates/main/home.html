@@ -38,9 +38,10 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a class="d" href="{% url 'login' %}">Login <i class="fa fa-user" aria-hidden="true"></i> 
                     </a></li>
-                    <li><a class="d" href="{% url 'signup' %}">Signup<i class="fa fa-user-plus" aria-hidden="true"></i>
+                    <li><a class="d" href="{% url 'signup' %}">Signup <i class="fa fa-user-plus" aria-hidden="true"></i>
                     </a></li>
-                    <li><a class="d" href="{% url 'update' %}"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>
+                    <li><a class="d" href="{% url 'update' %}"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></a></li>
+                    <li><a class="d" href="{% url 'logout' %}">Logout</a></li>
                 </ul>
             </div>
         </div>
@@ -101,7 +102,7 @@
             <div class="desc">
                 <b>Realme 7 Pro</b>
             </div>
-            <a href="http://www.google.com"><button type="button" class="bbb" herf="#"><b>Get More Details</b></button></a>
+            <a href="https://www.amazon.in/Realme-Pro-Mirror-Blue-128/dp/B08HMY2WDB/ref=sr_1_3?dchild=1&keywords=realme+7+pro&qid=1620196012&sr=8-3"><button type="button" class="bbb" herf="#"><b>Get More Details</b></button></a>
         </div>
 
         <div class="box1">
@@ -109,15 +110,15 @@
             <div class="desc">
                 <b>Whirlpool Fridge</b>
             </div>
-            <a href="http://www.google.com"><button type="button" class="bbb" herf="#"><b>Get More Details</b></button></a>
+            <a href="https://www.amazon.in/Whirlpool-Refrigerator-215-ROY-INV/dp/B08CS3FKFY/ref=sr_1_3?dchild=1&keywords=Whirlpool+Fridge&qid=1620196079&sr=8-3"><button type="button" class="bbb" herf="#"><b>Get More Details</b></button></a>
         </div>
 
         <div class="box1">
-            <img src="{% static 'main/images/v16_443.png'%}">
+            <img src="https://m.media-amazon.com/images/I/81qtALn+GpL._AC_UY327_QL65_.jpg">
             <div class="desc">
-                <b>Realme Smart TV</b>
+                <b>OnePlus 80 Smart TV</b>
             </div>
-            <a href="http://www.google.com"><button type="button" class="bbb" herf="#"><b>Get More Details</b></button></a>
+            <a href="https://www.amazon.in/OnePlus-inches-Ready-Android-32Y1/dp/B08B42LWKN/ref=sr_1_5?dchild=1&keywords=Realme+Smart+TV&qid=1620196210&sr=8-5"><button type="button" class="bbb" herf="#"><b>Get More Details</b></button></a>
         </div>
 
         <div class="box1">
@@ -125,22 +126,30 @@
             <div class="desc">
                 <b>Oneplus 9 Pro</b>
             </div>
-            <a href="http://www.google.com"><button type="button" class="bbb" herf="#"><b>Get More Details</b></button></a>
+            <a href="https://www.amazon.in/Test-Exclusive_2020_1166-Multi-3GB-Storage/dp/B089MS7D9K/ref=sr_1_3?dchild=1&keywords=Oneplus+9+Pro&qid=1620196301&sr=8-3"><button type="button" class="bbb" herf="#"><b>Get More Details</b></button></a>
         </div>
 
 		<div class="box1">
-            <img src="{% static 'main/images/v16_360.png'%}">
+            <img src="https://m.media-amazon.com/images/I/51jPUwqQTFL._AC_UY327_QL65_.jpg">
             <div class="desc">
-                <b>Acer Aspire 7</b>
+                <b>Dell Inspiron 3502 </b>
             </div>
-            <a href="http://www.google.com"><button type="button" class="bbb" herf="#"><b>Get More Details</b></button></a>
+            <a href="https://www.amazon.in/Dell-Inspiron-Integrated-Graphics-D560427WIN9BE/dp/B08X4N3DW2/ref=sr_1_3?dchild=1&keywords=dell+laptop&qid=1620196341&sr=8-3"><button type="button" class="bbb" herf="#"><b>Get More Details</b></button></a>
+        </div>
+
+        <div class="box1">
+            <img src="https://m.media-amazon.com/images/I/61Vs-rdtqvL._AC_UY327_QL65_.jpg">
+            <div class="desc">
+                <b>Whirlpool 1.5 Ton 3 Star </b>
+            </div>
+            <a href="https://www.amazon.in/Whirlpool-1-5T-MAGICOOL-PRO-COPR/dp/B07P5HJJW8/ref=sr_1_5?dchild=1&keywords=ac&qid=1620196445&sr=8-5"><button type="button" class="bbb" herf="#"><b>Get More Details</b></button></a>
         </div>
 
     </div>
     <div class="footer">
-        <a href="#" class="container1">Contact us</a>
-        <a href="#" class="container1">About us</a>
-        <a href="#" class="container1">FAQs</a>
+        <a href="{% url 'contactUs' %}" class="container1">Contact us</a>
+        <a href="{% url 'about' %}" class="container1">About us</a>
+        <a href="{% url 'faq' %}" class="container1">FAQs</a>
     </div>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>

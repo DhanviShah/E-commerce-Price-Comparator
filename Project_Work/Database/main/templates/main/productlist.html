@@ -63,9 +63,10 @@
 			<div class="images">
 				<img src={{x.imag_url}} />
 			</div>
-			<p> {{x.price}}</p>
+			<!-- <p> {{x.price}}</p> -->
 			<div class="product">
 				<p class="desc">{{x.des_list}}</p>
+				<p class="desc">Rs. {{x.price}}</p>
 			</div>
             
 			<div class="buttons">
@@ -76,10 +77,10 @@
 	</div>
 
 	<div class="footer">
-		<a href="#" class="container1">Contact us</a>
-		<a href="#" class="container1">About us</a>
-		<a href="#" class="container1">FAQs</a>
-	</div>
+        <a href="{% url 'contactUs' %}" class="container1">Contact us</a>
+        <a href="{% url 'about' %}" class="container1">About us</a>
+        <a href="{% url 'faq' %}" class="container1">FAQs</a>
+    </div>
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>

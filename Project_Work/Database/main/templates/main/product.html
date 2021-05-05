@@ -82,6 +82,7 @@
 		<div class="p"></div>
 		<div class="p"></div>
 		<div class="ll p bord">Amazon</div>
+		<!-- <div class="lpq pq bord"><img class="sizechange"src="https://bsmedia.business-standard.com/media-handler.php?mediaPath=http://bsmedia.business-standard.com/_media/bs/img/article/2014-09/17/full/1410955312-0696.jpg&width=1200"></div> -->
 		<div class="p"></div>
 		<div class="p">Rs. {{ priceA}}</div>
 		<div class="p"></div>
@@ -93,6 +94,7 @@
 		<div class="p"></div>
 		<div class="p"></div>
 		<div class="ll p bord">Flipkart</div>
+		<!-- <div class="lpq pq bord"><img class="sizechange"src="https://thecarenumbers.in/wp-content/uploads/2021/01/Flipkart-Logo-1.png"></div> -->
 		<div class="p"></div>
 		<div class="p">Rs. {{priceF}}</div>
 		<div class="p"></div>
@@ -103,6 +105,7 @@
 		<div class="p"></div>
 		<div class="p"></div>
 		<div class="ll p bord">Croma</div>
+		<!-- <div class="lpq pq bord"><img class="sizechange"src="https://ambiencemalls.com/logos/08-28-18am_30-11-2018-1531798943_rUbCPT_Croma_Logo.jpg"></div> -->
 		<div class="p"></div>
 		<div class="p">Rs. {{priceC}}</div>
 		<div class="p"></div>
@@ -115,15 +118,15 @@
 	
 	<div class="navii">
 		<a class="bb blck"></a>
-		<a href="#" class="bb">Contact us</a>
+		<a href="{% url 'contactUs' %}" class="bb">Contact us</a>
 		<a class="bb blck"></a>
 		<a class="bb blck"></a>
 		
-		<a href="#" class="bb">About us</a>
+		<a href="{% url 'about' %}" class="bb">About us</a>
 	
 		<a class="bb blck"></a>
 		<a class="bb blck"></a>
-		<a href="#" class="bb">FAQs</a>
+		<a href="{% url 'faq' %}" class="bb">FAQs</a>
 		<a class="bb blck"></a>
 
 	</div>

@@ -85,36 +85,44 @@ border: 1px solid #ccc;
 font-family: inherit;
 }
 
-.buttons{
+.buttons-flex .buttons{
 	background-color: white;
 	width: 100px;
 	height: 40px;
 	border-radius: 10px;
 	border-top: 10px;
-	padding-left: 5px;
-	padding-right: 5px;
 	border: 1px solid #aca3a3;
 	color: #000000;
 	font-size: large;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
-.buttons:active{
+.buttons-flex .buttons:active{
 	background: #6C5CE7;
 	color: white;
 	border: 1px solid white;
 }
 
-.end {
-	text-align:justify;
-  }
-  .end:after {
-	content:'';
-	display:inline-block;
-	width:99.5%;/* generates an extra transparent line */
-  }
-  /* makeup*/
-  .end {
-	padding: 1.2em 1em 0;
-	margin:1em;
+
+.buttons-flex {
+	height: 100px;
+	display: -webkit-flex;
+	padding: 1.2em 2em 0;
+	display: inline-flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+}
+.profile_img{
+	width: 10vw;
+	height: 10vw;
+}
+.log{
+background-color: white;
+width: 100px;
+height: 40px;
+border-radius: 10px;
+border: 1px solid #ccc;
+color: #000000;
+font-size: large;
+font-family: Arial, Helvetica, sans-serif;
 }

@@ -21,15 +21,18 @@ def home(request):
   return render(request,'main/home.html', {'form':fm})
 
 def update(request):
-  if request.method=='POST':
-    fm=PasswordChangeForm(user=request.user, data=request.POST)
-    if fm.is_valid():
-      fm.save()
-      update_session_auth_hash(request,fm.user)
-      return redirect('login')
+  if request.user.is_authenticated:
+    if request.method=='POST':
+      fm=PasswordChangeForm(user=request.user, data=request.POST)
+      if fm.is_valid():
+        fm.save()
+        update_session_auth_hash(request,fm.user)
+        return redirect('login')
+    else:
+      fm=PasswordChangeForm(user=request.user)
+    return render(request,'main/update.html', { 'fm': fm })
   else:
-    fm=PasswordChangeForm(user=request.user)
-  return render(request,'main/update.html', { 'fm': fm })
+    return redirect('home')
 
 def login(request):
   if request.user.is_authenticated:
@@ -66,6 +69,17 @@ def logout(request):
   g(request)
   return redirect('home')
 
+def contactUs(request):
+  fm=Search()
+  return render(request,'main/contactUs.html',{'form':fm})
+
+def faq(request):
+  fm=Search()
+  return render(request,'main/faq.html',{'form':fm})
+
+def about(request):
+  fm=Search()
+  return render(request,'main/about.html',{'form':fm})
 
 
 def product(request,product):  
