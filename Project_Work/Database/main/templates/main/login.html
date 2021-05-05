@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/login.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container" onclick="onclick">
+    <div class="top"></div>
+    <div class="bottom"></div>
+    <div class="center">
+        <h2 class="h">DaamJaano</h2>
+        <h3>LOGIN</h3>
+        <form method="post" novalidate>
+            {% if form.non_field_errors %}
+            {% for error in form.non_field_errors %}
+            <p> {{error}} </p>
+            {% endfor%}
+            {% endif%}
+            {% csrf_token %}
+            {% for fm in form %}
+            {{ fm.label_tag }} {{fm}} {{ fm.errors|striptags}} <br>
+            {% endfor%}
+            <button type="submit" class='log'>Login</button>
+        </form>
+        <h2>&nbsp;</h2>
+    <a href="{% url 'home' %}">Back</a>
+    <a href="{% url 'signup' %}">New user?</a>
+    </div>
+    </div>
+    <script src='https://codepen.io/banik/pen/3f837b2f0085b5125112fc455941ea94.js'></script>
+</body>
+</html>

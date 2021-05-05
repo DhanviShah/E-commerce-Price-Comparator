@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Price Comparision</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{% static 'main/css/product.css' %}">
+	<script src="https://use.fontawesome.com/02cfcb3bc4.js"></script>
+
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top abc">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+			<a href="#" class="navbar-brand">Daamjaano</a>
+		</div>
+	
+			
+			<form class="navbar-form navbar-left position-center">
+        		<div class="form-group">
+          			<input type="text" class="form-control" placeholder="Search">
+        		</div>
+      		</form>
+			
+			<ul class="nav navbar-nav navbar-right"> 
+				<li class="d"><a href="{% url 'login' %}">Login</a></li>
+				<li class="d"><a href="{% url 'signup' %}">Signup</a></li>
+			</ul>	
+		</div>
+	</div>
+	</nav> 	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<div class="big" id="bi">
+		<div class="box">
+			<div class="bu">
+			<button type="button">Mobile</button>
+			</div>
+		</div>
+		<div class="box">
+			<div class="bu">
+			<button type="button" herf="#">Television</button>
+			</div>
+		</div>
+		<div class="box">
+			<div class="bu">
+			<button type="button" herf="#">Air Conditioner</button>
+			</div>
+		</div>
+		<div class="box">
+			<div class="bu">
+			<button type="button" herf="#">Laptop</button>
+			</div>
+		</div>
+		<div class="box">
+			<div class="bu">
+			<button type="button" herf="#">Refrigerator</button>
+			</div>
+		</div>
+	</div> 
+    <div>
+		{{pname}}
+		{{des}}
+		{{priceA}}
+		<img src={{imagurl}} alt="">
+		<a href="{{linkA}}"> <button> view details</button></a>
+		<form method="POST" > 
+			{% csrf_token %}
+			<button type="submit">
+				<i class="fa fa-bell-o"></i>
+				Set Alert</button>
+		</form>
+		{% for f in messages %}
+		   {{f}}
+		{% endfor %}
+	</div>
+	<div class="prod">
+		<div class="row">
+			<div class="col">
+				<div class="slider">
+					<div class="product">
+                        <img src="{% static 'main/images/Tv.jpeg'%}" alt="" onclick="clickme(this)">
+                        <img src="{% static 'main/images/Tv.jpeg'%}" alt="" onclick="clickme(this)">
+                        <img src="{% static 'main/images/Tv.jpeg'%}" alt="" onclick="clickme(this)">
+                        <img src="{% static 'main/images/Tv.jpeg'%}" alt="" onclick="clickme(this)">
+					</div>
+					<div class="preview">
+                        <img src="{% static 'main/images/Tv.jpeg'%}" id="imagebox" alt="">
+					</div>	
+				</div>
+			</div>
+			<div class="col">
+				<div class="contant">
+					<p class="brand">brand samsung</p>
+					<h2>samsung Tv</h2>
+                    
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<div class="related">
+			<h2>Price list</h2>
+			<div class="row">
+				<div class="column1">
+					<div class="site">
+						<img src="{% static 'main/images/amazon.jpeg'%}" alt="">
+						<p>price</p>
+						<button type="button">View Details</button>
+					</div>
+				</div>
+			</div>
+			<div class="columns"></div>
+			<div class="columns"></div>
+		</div>
+    
+    </div>
+   
+	<script>
+		function clickme(smallImg){
+
+			var fullImg = document.getElementById("imagebox");
+			fullImg.src = smallImg.src;
+
+		}
+	</script>
+</body>
+</html>	

@@ -1,84 +1,151 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Price Comparision</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="HomePage.css">
+    <title>Homepage</title>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="homepage.css">
+    <script src="https://use.fontawesome.com/02cfcb3bc4.js"></script>
 </head>
+
 <body>
-	<nav class="navbar navbar-default navbar-fixed-top abc">
-	<div class="container">
-		<div class="navbar-header">
-			<h4>DaamJaano</h4>
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
-			<span class="sr-only">Toggle navigation</span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			</button>
-		</div>
-			
-			<form class="navbar-form navbar-left position-center">
-        		<div class="form-group">
-          			<input type="text" class="form-control" placeholder="Search">
-        		</div>
-      		</form>
-			
-			<ul class="nav navbar-nav navbar-right">
-				<li class="d"><a href="Login.html">Login</a></li>
-				<li class="d"><a href="SignUp.html">Signup</a></li>
-			</ul>	
-		</div>
-	</div>
-	</nav> 	
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <nav class="navbar navbar-default navbar-fixed-top abc">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">DaamJaano</a>
+            </div>
 
-	<div class="big" id="bi">
-		<div class="box">
-			<img src="mobile.jpeg">
-			<div class="bu">
-			<button type="button">Mobile</button>
-			</div>
-		</div>
-		<div class="box">
-			<img src="Tv.jpeg">
-			<div class="bu">
-			<button type="button" herf="#">Television</button>
-			</div>
-		</div>
-		<div class="box">
-			<img src="ac.jpg">
-			<div class="bu">
-			<button type="button" herf="#">Air Conditioner</button>
-			</div>
-		</div>
-		<div class="box">
-			<img src="laptop.jpg">
-			<div class="bu">
-			<button type="button" herf="#">Laptop</button>
-			</div>
-		</div>
-		<div class="box">
-			<img src="fridge.jpeg">
-			<div class="bu">
-			<button type="button" herf="#">Refrigerator</button>
-			</div>
-		</div>
+            <div class="collapse navbar-collapse" id="bs-nav-demo">
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search for Mobilephones/Laptops/Airconditioners/Televisions/Refrigarators">
+                    </div>
+                </form>
 
-		<h2> Popular deals </h2>
-		<div class="deal">
-			<div class="box1"><img src="fridge.jpeg"></div>
-			<div class="box1"><img src="fridge.jpeg"></div>
-			<div class="box1"><img src="fridge.jpeg"></div>
-			<div class="box1"><img src="fridge.jpeg"></div>
-			<div class="box1"><img src="fridge.jpeg"></div>
-			<div class="box1"><img src="fridge.jpeg"></div>
-		</div>
-	</div> 
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="d" href="login.html">Login <i class="fa fa-user" aria-hidden="true"></i> 
+                    </a></li>
+                    <li><a class="d" href="signup.html">Signup<i class="fa fa-user-plus" aria-hidden="true"></i>
+                    </a></li>
+                    <li><a class="d" href="update.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bkl">
+        <div class="big">
+            <a href="productlist.html">
+                <div class="box1">
+                    <img src="card-1_132698011.png">
+                    <div class="bu">
+                        <button type="button">Mobile Phones</button>
+                    </div>
+                </div>
+            </a>
+            <a href="productlist.html">
+                <div class="box2">
+                    <img src="card-2_628627137.png">
+                    <div class="bu">
+                        <button type="button" herf="#">Laptops</button>
+                    </div>
+                </div>
+            </a>
+            <a href="productlist.html">
+                <div class="box3">
+                    <img src="card-3_245943451.png">
+                    <div class="bu">
+                        <button type="button" herf="#">Air Conditioners</button>
+                    </div>
+                </div>
+            </a>
+            <a href="productlist.html">
+                <div class="box4">
+                    <img src="card-4_906173506.png">
+                    <div class="bu">
+                        <button type="button" herf="#">Televisions</button>
+                    </div>
+                </div>
+            </a>
+            <a href="productlist.html">
+                <div class="box5">
+                    <img src="card-5_911816166.png">
+                    <div class="bu">
+                        <button type="button" herf="#">Refrigerator</button>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <h2>
+        <div class="pd"><b>Popular Deals</b> </div>
+    </h2>
+    <div class="deal">
+        <div class="box1">
+            <div class="image">
+                <img src="v16_238.png">
+            </div>
+            <div class="desc">
+                <b>Realme 7 Pro</b>
+            </div>
+            <a href="http://www.google.com"><button type="button" class="bbb" herf="#"><b>Get More Details</b></button></a>
+        </div>
+
+        <div class="box1">
+            <img src="v16_360.png">
+            <div class="desc">
+                <b>Acer Aspire 7</b>
+            </div>
+            <a href="http://www.google.com"><button type="button" class="bbb" herf="#"><b>Get More Details</b></button></a>
+        </div>
+
+        <div class="box1">
+            <img src="v16_387.png">
+            <div class="desc">
+                <b>Whirlpool Fridge</b>
+            </div>
+            <a href="http://www.google.com"><button type="button" class="bbb" herf="#"><b>Get More Details</b></button></a>
+        </div>
+
+        <div class="box1">
+            <img src="v16_443.png">
+            <div class="desc">
+                <b>Realme Smart TV</b>
+            </div>
+            <a href="http://www.google.com"><button type="button" class="bbb" herf="#"><b>Get More Details</b></button></a>
+        </div>
+
+        <div class="box1">
+            <img src="v16_415.png">
+            <div class="desc">
+                <b>Oneplus 9 Pro</b>
+
+            </div>
+            <a href="http://www.google.com"><button type="button" class="bbb" herf="#"><b>Get More Details</b></button></a>
+        </div>
+
+        <div class="box1">
+            <img src="v16_443.png">
+            <div class="desc">
+                <b>Realme Smart TV</b>
+            </div>
+            <a href="http://www.google.com"><button type="button" class="bbb" herf="#"><b>Get More Details</b></button></a>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="ContactUs.html" class="container1">Contact us</a>
+        <a href="AboutUs.html" class="container1">About us</a>
+        <a href="FAQs.html" class="container1">FAQs</a>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>
 
-
-	

@@ -6,9 +6,8 @@ def send_mail(sender,to):
   server.starttls()
   server.ehlo()
   server.login('daamjano@gmail.com','Qwerty123%')
-  subject = 'Test Mail'
-  body = '''Hurray we succeeded, this is a test mail to make sure that you recieve it in good health :)
-            This is an automated mail!! check check :*)'''
+  subject = 'Alert! Prices have dropped!'
+  body = '''Why wait! The prices have dropped, follow the link below and buy now.'''
 
   msg = f'subject: {subject} \n\n {body}'
 
