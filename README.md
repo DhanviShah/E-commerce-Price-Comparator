@@ -16,6 +16,9 @@
   <img src="https://user-images.githubusercontent.com/45822642/117127608-ea83e700-adb9-11eb-9858-40038e319cb2.jpeg" width="400"/>
 </p>
 3. Product  List  Page - This  page  contains  list  of  the  respected  products.  After  clicking  on  any  of  the  five  cards  on  the  home  page, the  user  can  respectively  go  to  the  mobile  list  or  laptop  list  or  air-conditioner  list  or  television  list  or  to  the  list  of  refrigerators, according  to  his / her  choice. 
+<p float="left">
+  <img src="https://user-images.githubusercontent.com/45822642/117270246-a1459d00-ae76-11eb-8fa4-91f4a0fe1225.jpeg" width="400">
+</p>
 4. Update  Profile  - The  user  can  change  his / her  password  (once  already  logged  in)  by  using  the  Updating  Profile  feature.
 <p float="left">
   <img src="https://user-images.githubusercontent.com/45822642/117129110-e953b980-adbb-11eb-90cd-457b8701bac2.png" width="400">
@@ -33,5 +36,6 @@
   <img src="https://user-images.githubusercontent.com/45822642/117129780-c1b12100-adbc-11eb-8864-839ef2472f09.png" width="400">
 </p>
 
-
-##Thank You For Visiting!
+___________________________________________________________________________________________________
+Thank You For Visiting!
+Keep shopping!
