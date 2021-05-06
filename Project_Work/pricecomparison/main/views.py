@@ -8,6 +8,8 @@ from django.contrib import messages
 from django.http import HttpResponse
 from selenium import webdriver as wb
 from bs4 import BeautifulSoup
+from smtplib import SMTP
+from .email import *
 
 
 def home(request):
@@ -225,6 +227,11 @@ def product(request,product):
       pro2.save()
       pro3=Product_Database( email= request.user.email, name='croma', price=obj.cromaP,product_name=Pname, link=obj.linkC)
       pro3.save()
+
+      data={'p': Pname,'a': obj.linkA, 'f': obj.linkF, 'c': obj.linkC , 'pA': obj.amazonP,'pF': obj.flipkartP,'pC': obj.cromaP}
+      sender = 'daamjano@gmail.com'
+      to = [request.user.email]
+      send_mail(sender,to, data)
       fm={
         'pname':Pname,
         'des':obj.des,
